@@ -1,0 +1,14 @@
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\bin\Debug\Algorithm.exe.config
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\obj\Debug\Algorithm.csprojResolveAssemblyReference.cache
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\obj\Debug\Algorithm.Properties.Resources.resources
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\obj\Debug\Algorithm.csproj.GenerateResource.Cache
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\bin\Debug\Algorithm.exe
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\bin\Debug\Algorithm.pdb
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\obj\Debug\Algorithm.exe
+c:\users\狂本誠\documents\visual studio 2013\Projects\Algorithm\Algorithm\obj\Debug\Algorithm.pdb
+B:\專門\Algorithm\Algorithm\bin\Debug\Algorithm.exe.config
+B:\專門\Algorithm\Algorithm\obj\Debug\Algorithm.exe
+B:\專門\Algorithm\Algorithm\obj\Debug\Algorithm.pdb
+F:\專門\Algorithm\Algorithm\bin\Debug\Algorithm.exe.config
+F:\專門\Algorithm\Algorithm\obj\Debug\Algorithm.exe
+F:\專門\Algorithm\Algorithm\obj\Debug\Algorithm.pdb
