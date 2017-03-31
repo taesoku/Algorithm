@@ -13,8 +13,8 @@ namespace Algorithm.Sort
             //AlgorithmSort1BubbleSort.Answer();
             //AlgorithmSort2BucketSort.Answer();
             //AlgorithmSort3HeapSort.Answer();
-            AlgorithmSort4InsertionSort.Answer();
-            //AlgorithmSort5MergeSort.Answer();
+            //AlgorithmSort4InsertionSort.Answer();
+            AlgorithmSort5MergeSort.Answer();
             //AlgorithmSort6QuickSort.Answer();
             //AlgorithmSort7RadixSort.Answer();
             //AlgorithmSort8SelectionSort.Answer();

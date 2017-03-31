@@ -17,3 +17,11 @@ R:\專門\Algorithm\Algorithm.Sort\obj\Debug\Algorithm.Sort.csprojResolveAssembl
 B:\專門\Algorithm\Algorithm.Sort\bin\Debug\Algorithm.exe.config
 B:\專門\Algorithm\Algorithm.Sort\obj\Debug\Algorithm.exe
 B:\專門\Algorithm\Algorithm.Sort\obj\Debug\Algorithm.pdb
+B:\專門\Algorithm\Algorithm.Sort\bin\Debug\Algorithm.exe
+B:\專門\Algorithm\Algorithm.Sort\bin\Debug\Algorithm.pdb
+B:\專門\Algorithm\Algorithm.Sort\obj\Debug\Algorithm.Sort.csprojResolveAssemblyReference.cache
+B:\專門\Algorithm\Algorithm.Sort\obj\Debug\AlgorithmSearch.Properties.Resources.resources
+B:\專門\Algorithm\Algorithm.Sort\obj\Debug\Algorithm.Sort.csproj.GenerateResource.Cache
+C:\Users\benjamin\Documents\GitHub\Algorithm.Search\src\Algorithm.Sort\bin\Debug\Algorithm.exe.config
+C:\Users\benjamin\Documents\GitHub\Algorithm.Search\src\Algorithm.Sort\obj\Debug\Algorithm.exe
+C:\Users\benjamin\Documents\GitHub\Algorithm.Search\src\Algorithm.Sort\obj\Debug\Algorithm.pdb

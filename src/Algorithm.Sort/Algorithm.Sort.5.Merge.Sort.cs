@@ -12,17 +12,22 @@ namespace Algorithm.Sort
             var outputs = MergeList(inputs);
         }
 
+        // worst case space complexity: O(n)
+        // best case time complexity: O(n log n) typical | O(n) natural variant
+        // average case time complexity: O(n log n)
+        // worst case time complexity: O(n log n)
+
         public static List<int> MergeList(List<int> inputs)
         {
             if (inputs.Count <= 1) return inputs;
             var left = new List<int>();
             var right = new List<int>();
-            var middle = inputs.Count/2;
+            var middle = inputs.Count / 2;
             for (int i = 0; i < middle; i++) left.Add(inputs[i]);
             for (int i = middle; i < inputs.Count; i++) right.Add(inputs[i]);
             left = MergeList(left);
             right = MergeList(right);
-            if (left.Last() < right.First())
+            if (left.Last() <= right.First())
             {
                 left.AddRange(right);
                 return left;
