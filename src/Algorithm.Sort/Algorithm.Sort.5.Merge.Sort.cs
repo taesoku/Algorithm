@@ -6,16 +6,57 @@ namespace Algorithm.Sort
     public static class AlgorithmSort5MergeSort
     {
 
+        // tuesday
+
         public static void Answer()
         {
-            var inputs = new List<int> { 6, 5, 3, 1, 8, 7, 2, 4 };
-            var outputs = MergeList(inputs);
+
+            var inputs1 = new List<int> { 6, 5, 3, 1, 8, 7, 2, 4 };
+            var outputs1 = MergeList(inputs1);
+
+            var inputs2 = new [] {6, 5, 3, 1, 8, 7, 2, 4};
+            var outputs2 = MergeArray(inputs2);
+
         }
 
         // worst case space complexity: O(n)
         // best case time complexity: O(n log n) typical | O(n) natural variant
         // average case time complexity: O(n log n)
         // worst case time complexity: O(n log n)
+
+        public static int[] MergeArray(int[] inputs)
+        {
+            var n = inputs.Length;
+            if (n <= 1) return inputs;
+            var middle = n / 2;
+            var left = new int[middle];
+            var right = new int[n - middle];
+            for (int i = 0; i < middle; i++) left[i] = inputs[i];
+            for (int i = 0; i < n - middle; i++) right[i] = inputs[middle + i];
+            left = MergeArray(left);
+            right = MergeArray(right);
+            return MergeSort(left, right);
+        }
+
+        public static int[] MergeSort(int[] left, int[] right)
+        {
+            var m = left.Length;
+            var n = right.Length;
+            var temp = new int[m + n];
+            var i = 0;
+            var j = 0;
+            var k = 0;
+            while (i < m && j < n)
+            {
+                if (left[i] < right[j])
+                    temp[k++] = left[i++];
+                else
+                    temp[k++] = right[j++];
+            }
+            while (i < m) temp[k++] = left[i++];
+            while (j < n) temp[k++] = right[j++];
+            return temp;
+        }
 
         public static List<int> MergeList(List<int> inputs)
         {

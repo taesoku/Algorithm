@@ -7,7 +7,7 @@ namespace Algorithm.Sort
     class AlgorithmSort
     {
 
-        static void Main(string[] args)
+        static void Main()
         {
             var stopwatch = Stopwatch.StartNew();
             //AlgorithmSort1BubbleSort.Answer();
