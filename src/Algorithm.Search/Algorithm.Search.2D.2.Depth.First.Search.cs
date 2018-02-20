@@ -78,6 +78,9 @@ namespace Algorithm.Search
     //}
 
 
+    //consider an undirected graph G with n vertices and e edges
+    //what is the time taken by DFS if the graph is represented by (i) adjacency matrix and (ii) adjacency list?
+    //O(n2), O(e + n)
 
 
 
