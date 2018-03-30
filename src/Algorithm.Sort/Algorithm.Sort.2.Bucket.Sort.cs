@@ -16,19 +16,18 @@ namespace Algorithm.Sort
         {
             var max = inputs.Max();
             var min = inputs.Min();
-            var buckets = new List<int>[max - min + 1];
+            var outputs = new List<int>[max - min + 1];
             foreach (var input in inputs)
             {
-                var temp = input - min;
-                if (buckets[temp] == null) buckets[temp] = new List<int>();
-                buckets[temp].Add(input);
+                var curr = input - min;
+                if (outputs[curr] == null) outputs[curr] = new List<int>();
+                outputs[curr].Add(input);
             }
             var k = 0;
-            for (int i = 0; i < buckets.Length; i++)
+            foreach (var output in outputs)
             {
-                if (buckets[i] == null) continue;
-                for (int j = 0; j < buckets[i].Count; j++)
-                    inputs[k++] = buckets[i][j];
+                if (output == null) continue;
+                foreach (var o in output) inputs[k++] = o;
             }
         }
 
