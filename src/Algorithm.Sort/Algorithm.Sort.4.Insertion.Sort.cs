@@ -15,14 +15,14 @@ namespace Algorithm.Sort
 
         public static void InsertionSort(List<int> inputs)
         {
-            for (int i = 1; i < inputs.Count; i++)
-                for (int j = i; j > 0; j--)
+            for (var i = 1; i < inputs.Count; i++)
+                for (var j = i; j > 0; j--)
                 {
                     if (inputs[j - 1] > inputs[j])
                     {
-                        var temp = inputs[j - 1];
+                        var curr = inputs[j - 1];
                         inputs[j - 1] = inputs[j];
-                        inputs[j] = temp;
+                        inputs[j] = curr;
                     }
                     else break;
                 }
