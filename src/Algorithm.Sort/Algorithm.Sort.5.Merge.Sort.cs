@@ -64,16 +64,13 @@ namespace Algorithm.Sort
             var left = new List<int>();
             var right = new List<int>();
             var middle = inputs.Count / 2;
-            for (int i = 0; i < middle; i++) left.Add(inputs[i]);
-            for (int i = middle; i < inputs.Count; i++) right.Add(inputs[i]);
+            for (var i = 0; i < middle; i++) left.Add(inputs[i]);
+            for (var i = middle; i < inputs.Count; i++) right.Add(inputs[i]);
             left = MergeList(left);
             right = MergeList(right);
-            if (left.Last() <= right.First())
-            {
-                left.AddRange(right);
-                return left;
-            }
-            return MergeSort(left, right);
+            if (left.Last() > right.First()) return MergeSort(left, right);
+            left.AddRange(right);
+            return left;
         }
 
         public static List<int> MergeSort(List<int> left, List<int> right)
