@@ -17,15 +17,13 @@ namespace Algorithm.Sort
         public static void BubbleSort(List<int> inputs, int n)
         {
             var isSorted = true;
-            for (int i = 0; i < n - 1; i++)
+            for (var i = 0; i < n - 1; i++)
             {
-                if (inputs[i] > inputs[i + 1])
-                {
-                    var temp = inputs[i];
-                    inputs[i] = inputs[i + 1];
-                    inputs[i + 1] = temp;
-                    isSorted = false;
-                }
+                if (inputs[i] <= inputs[i + 1]) continue;
+                var curr = inputs[i];
+                inputs[i] = inputs[i + 1];
+                inputs[i + 1] = curr;
+                isSorted = false;
             }
             if (!isSorted) BubbleSort(inputs, n - 1);
         }

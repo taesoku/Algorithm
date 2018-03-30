@@ -5,6 +5,8 @@ namespace Algorithm.Sort
     public static class AlgorithmSort4InsertionSort
     {
 
+        // monday
+
         public static void Answer()
         {
             var inputs = new List<int> { 6, 5, 3, 1, 8, 7, 2, 4 };
