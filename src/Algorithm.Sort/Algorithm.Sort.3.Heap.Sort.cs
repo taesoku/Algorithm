@@ -13,16 +13,16 @@ namespace Algorithm.Sort
 
         public static void HeapList(List<int> inputs)
         {
-            var size = inputs.Count;
-            for (int i = (size - 1)/2; i >= 0; i--)
-                HeapSort(inputs, size, i);
-            for (int i = size - 1; i > 0; i--)
+            var count = inputs.Count;
+            for (var i = (count - 1)/2; i >= 0; i--)
+                HeapSort(inputs, count, i);
+            for (var i = count - 1; i > 0; i--)
             {
                 var temp = inputs[i];
                 inputs[i] = inputs[0];
                 inputs[0] = temp;
-                size--;
-                HeapSort(inputs, size);
+                count--;
+                HeapSort(inputs, count);
             }
         }
 
@@ -32,13 +32,11 @@ namespace Algorithm.Sort
             var left = right - 1;
             var max = left < size && inputs[left] > inputs[index] ? left : index;
             max = right < size && inputs[right] > inputs[max] ? right : max;
-            if (index != max)
-            {
-                var temp = inputs[index];
-                inputs[index] = inputs[max];
-                inputs[max] = temp;
-                HeapSort(inputs, size, max);
-            }
+            if (index == max) return;
+            var temp = inputs[index];
+            inputs[index] = inputs[max];
+            inputs[max] = temp;
+            HeapSort(inputs, size, max);
         }
 
     }
