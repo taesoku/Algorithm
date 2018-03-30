@@ -18,7 +18,7 @@ namespace Algorithm.Sort
             var isEmpty = true;
             var radix = new Hashtable();
             var temp = new int[inputs.Count];
-            for (int i = 0; i < inputs.Count; i++)
+            for (var i = 0; i < inputs.Count; i++)
             {
                 var curr = inputs[i]/digit;
                 radix[i] = curr%10;
@@ -26,7 +26,7 @@ namespace Algorithm.Sort
             }
             if (isEmpty) return inputs;
             var sorted = RadixSort(radix);
-            for (int i = 0; i < sorted.Count; i++)
+            for (var i = 0; i < sorted.Count; i++)
                 temp[i] = inputs[(int) sorted[i]];
             return RadixList(temp.ToList(), digit*10);
         } 
@@ -35,9 +35,9 @@ namespace Algorithm.Sort
         {
             var temp = new int[MaxHashtable(radix) + 1];
             var value = new Hashtable();
-            for (int i = 0; i < radix.Count; i++) temp[(int) radix[i]]++;
-            for (int i = 1; i < temp.Length; i++) temp[i] += temp[i - 1];
-            for (int i = radix.Count - 1; i >= 0; i--)
+            foreach (var r in radix) temp[(int) r]++;
+            for (var i = 1; i < temp.Length; i++) temp[i] += temp[i - 1];
+            for (var i = radix.Count - 1; i >= 0; i--)
             {
                 var curr = (int) radix[i];
                 var index = temp[curr];
@@ -50,9 +50,7 @@ namespace Algorithm.Sort
         public static int MaxHashtable(Hashtable radix)
         {
             var max = (int) radix[0];
-            for (int i = 0; i < radix.Count; i++)
-                max = max < (int) radix[i] ? (int) radix[i] : max;
-            return max;
+            return radix.Cast<int>().Concat(new[] {max}).Max();
         }
 
     }
