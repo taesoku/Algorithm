@@ -23,8 +23,8 @@ namespace Algorithm.Sort
             var index = inputs.IndexOf(pivot);
             var left = new List<int>();
             var right = new List<int>();
-            for (int i = 0; i < index; i++) left.Add(inputs[i]);
-            for (int i = index; i < inputs.Count; i++) right.Add(inputs[i]);
+            for (var i = 0; i < index; i++) left.Add(inputs[i]);
+            for (var i = index; i < inputs.Count; i++) right.Add(inputs[i]);
             left = QuickList(left);
             right = QuickList(right);
             left.AddRange(right);
@@ -44,12 +44,10 @@ namespace Algorithm.Sort
                     right--;
                     continue;
                 }
-                if (left < right)
-                {
-                    var temp = inputs[left];
-                    inputs[left] = inputs[right];
-                    inputs[right] = temp;
-                }
+                if (left >= right) continue;
+                var curr = inputs[left];
+                inputs[left] = inputs[right];
+                inputs[right] = curr;
             }
         }
 
