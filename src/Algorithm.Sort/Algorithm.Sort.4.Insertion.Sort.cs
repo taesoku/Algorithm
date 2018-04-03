@@ -16,6 +16,7 @@ namespace Algorithm.Sort
         public static void InsertionSort(List<int> inputs)
         {
             for (var i = 1; i < inputs.Count; i++)
+            {
                 for (var j = i; j > 0; j--)
                 {
                     if (inputs[j - 1] > inputs[j])
@@ -26,6 +27,8 @@ namespace Algorithm.Sort
                     }
                     else break;
                 }
+            }
+        
         }
 
     }

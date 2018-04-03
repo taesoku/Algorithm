@@ -19,7 +19,7 @@ namespace Algorithm.Sort
                 for (var j = i + 1; j < inputs.Count; j++)
                     if (inputs[j] < inputs[min]) min = j;
                 if (i == min) continue;
-                var curr= inputs[i];
+                var curr = inputs[i];
                 inputs[i] = inputs[min];
                 inputs[min] = curr;
             }

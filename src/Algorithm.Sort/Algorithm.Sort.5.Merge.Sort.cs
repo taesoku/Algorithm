@@ -75,23 +75,23 @@ namespace Algorithm.Sort
 
         public static List<int> MergeSort(List<int> left, List<int> right)
         {
-            var temp = new List<int>();
+            var curr = new List<int>();
             while (left.Count != 0 && right.Count != 0)
             {
                 if (left.First() < right.First())
                 {
-                    temp.Add(left.First());
+                    curr.Add(left.First());
                     left.RemoveAt(0);
                 }
                 else
                 {
-                    temp.Add(right.First());
+                    curr.Add(right.First());
                     right.RemoveAt(0);
                 }
             }
-            temp.AddRange(left);
-            temp.AddRange(right);
-            return temp;
+            curr.AddRange(left);
+            curr.AddRange(right);
+            return curr;
         }
 
     }

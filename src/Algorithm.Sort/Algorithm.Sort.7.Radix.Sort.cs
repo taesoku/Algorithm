@@ -20,8 +20,8 @@ namespace Algorithm.Sort
             var temp = new int[inputs.Count];
             for (var i = 0; i < inputs.Count; i++)
             {
-                var curr = inputs[i]/digit;
-                radix[i] = curr%10;
+                var curr = inputs[i] / digit;
+                radix[i] = curr % 10;
                 if (curr != 0) isEmpty = false;
             }
             if (isEmpty) return inputs;
@@ -29,7 +29,7 @@ namespace Algorithm.Sort
             for (var i = 0; i < sorted.Count; i++)
                 temp[i] = inputs[(int) sorted[i]];
             return RadixList(temp.ToList(), digit*10);
-        } 
+        }
 
         public static Hashtable RadixSort(Hashtable radix)
         {

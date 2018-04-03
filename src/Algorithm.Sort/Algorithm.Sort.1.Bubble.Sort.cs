@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Algorithm.Sort
 {
@@ -25,7 +24,7 @@ namespace Algorithm.Sort
                 inputs[i + 1] = curr;
                 isSorted = false;
             }
-            if (!isSorted) BubbleSort(inputs, n - 1);
+            if (isSorted) BubbleSort(inputs, n - 1);
         }
 
     }
