@@ -3,10 +3,11 @@
 namespace Algorithm.Search
 {
 
-    // Tuesday
-
     public class AlgorithmSearchList2LinearSearch
     {
+
+        // tuesday
+
         public static void Answer()
         {
             var inputs = new List<int> {3, 6, 7, 1, 8, 12, 9, 5, 2, 96, 65, 43, 23, 56};
@@ -18,7 +19,7 @@ namespace Algorithm.Search
 
         public static bool LinearSearch(List<int> inputs, int n, ref int index)
         {
-            for (int i = 0; i < inputs.Count; i++)
+            for (var i = 0; i < inputs.Count; i++)
             {
                 if (inputs[i] == n)
                 {
