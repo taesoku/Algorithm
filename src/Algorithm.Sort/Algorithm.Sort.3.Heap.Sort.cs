@@ -18,9 +18,9 @@ namespace Algorithm.Sort
                 HeapSort(inputs, count, i);
             for (var i = count - 1; i > 0; i--)
             {
-                var temp = inputs[i];
+                var curr = inputs[i];
                 inputs[i] = inputs[0];
-                inputs[0] = temp;
+                inputs[0] = curr;
                 count--;
                 HeapSort(inputs, count);
             }
@@ -33,9 +33,9 @@ namespace Algorithm.Sort
             var max = left < size && inputs[left] > inputs[index] ? left : index;
             max = right < size && inputs[right] > inputs[max] ? right : max;
             if (index == max) return;
-            var temp = inputs[index];
+            var curr = inputs[index];
             inputs[index] = inputs[max];
-            inputs[max] = temp;
+            inputs[max] = curr;
             HeapSort(inputs, size, max);
         }
 

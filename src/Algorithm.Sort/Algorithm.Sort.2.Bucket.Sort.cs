@@ -12,7 +12,7 @@ namespace Algorithm.Sort
             BucketSort(inputs);
         }
 
-        public static void BucketSort(List<int> inputs )
+        public static void BucketSort(List<int> inputs)
         {
             var max = inputs.Max();
             var min = inputs.Min();
@@ -27,7 +27,7 @@ namespace Algorithm.Sort
             foreach (var output in outputs)
             {
                 if (output == null) continue;
-                foreach (var o in output) inputs[k++] = o;
+                foreach (var o in output) inputs[k++] = 0;
             }
         }
 
