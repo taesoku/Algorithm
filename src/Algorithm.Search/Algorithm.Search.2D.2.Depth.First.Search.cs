@@ -4,6 +4,17 @@ using System.Collections.Generic;
 namespace Algorithm.Search
 {
 
+    // inorder
+    // postorder
+    // preorder
+
+    //stack with recursive
+
+    public class Algorithm011DepthFirstSearch
+    {
+        
+    }
+
     //public class Algorithm011DepthFirstSearch
     //{
 
