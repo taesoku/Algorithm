@@ -10,7 +10,7 @@ namespace Algorithm.Search
         public static void Answer()
         {
 
-            var graph = new Graph(9);
+            var graph = new BreadthFirstSearchGraph(9);
             graph.AddEdge(0, 1);
             graph.AddEdge(1, 2);
             graph.AddEdge(1, 3);
@@ -21,24 +21,18 @@ namespace Algorithm.Search
             graph.AddEdge(5, 6);
             graph.AddEdge(5, 7);
             graph.AddEdge(6, 8);
-            //graph.DFS();
-            //graph.BFS();
-            //graph.DFSR();
-            //graph.DFS(3);
+            graph.BreadthFirstSearch();
             //graph.BFS(3);
-            graph.DFSR(3);
+
             //var board1 = new[,]
             //{
             //    {1, 1, 1, 1, 1, 1}, {0, 0, 1, 0, 0, 1}, {1, 1, 1, 0, 1, 1}, {1, 0, 0, 0, 1, 0}, {1, 1, 1, 0, 1, 0},
             //    {0, 0, 1, 1, 1, 1}
             //};
             //BreadthFirstSearch(board1, 0, 0);
-
-
-
         }
 
-        public class Graph
+        public class BreadthFirstSearchGraph
         {
             public class Node
             {
@@ -56,13 +50,11 @@ namespace Algorithm.Search
 
             private List<Node> Nodes;
 
-            public Graph(int size)
+            public BreadthFirstSearchGraph(int size)
             {
                 Nodes = new List<Node>();
                 for (var i = 0; i < size; i++)
-                {
                     Nodes.Add(new Node(i));
-                }
             }
 
             public void AddEdge(int i1, int i2)
@@ -73,57 +65,9 @@ namespace Algorithm.Search
                 if (!n2.Adjacents.Contains(n1)) n2.Adjacents.AddLast(n1);
             }
 
-            public void DFS() { DFS(0); }
+            public void BreadthFirstSearch() { BreadthFirstSearch(0); }
 
-            public void DFS(int index)
-            {
-                var root = Nodes[index];
-                var stack= new Stack<Node>();
-                stack.Push(root);
-                root.Marked = true;
-                while (stack.Count != 0)
-                {
-                    var curr = stack.Pop();
-                    foreach (var adjacent in curr.Adjacents)
-                    {
-                        if (adjacent.Marked == false)
-                        {
-                            adjacent.Marked = true;
-                            stack.Push(adjacent);
-                        }
-                    }
-                    Visit(curr);
-                }
-            }
-
-            public void DFSR(Node input)
-            {
-                if (input == null) return;
-                input.Marked = true;
-                Visit(input);
-                foreach (var adjacent in input.Adjacents)
-                {
-                    if (adjacent.Marked == false)
-                    {
-                        DFSR(adjacent);
-                    }
-                }
-            }
-
-            public void DFSR()
-            {
-                DFSR(0);
-            }
-
-            public void DFSR(int index)
-            {
-                var root = Nodes[index];
-                DFSR(root);
-            }
-
-            public void BFS() { BFS(0); }
-
-            public void BFS(int index)
+            public void BreadthFirstSearch(int index)
             {
                 var root = Nodes[index];
                 var queue = new Queue<Node>();
@@ -134,7 +78,7 @@ namespace Algorithm.Search
                     var curr = queue.Dequeue();
                     foreach (var adjacent in curr.Adjacents)
                     {
-                        if (adjacent.Marked == false)
+                        if (!adjacent.Marked)
                         {
                             adjacent.Marked = true;
                             queue.Enqueue(adjacent);
