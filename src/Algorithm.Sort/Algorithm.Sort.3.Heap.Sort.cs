@@ -14,7 +14,7 @@ namespace Algorithm.Sort
         public static void HeapList(List<int> inputs)
         {
             var count = inputs.Count;
-            for (var i = (count -1)/2; i >= 0; i--)
+            for (var i = (count - 1) / 2; i >= 0; i--)
                 HeapSort(inputs, count, i);
             for (var i = count - 1; i > 0; i--)
             {

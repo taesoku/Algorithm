@@ -89,8 +89,6 @@ namespace Algorithm.Sort
                     right.RemoveAt(0);
                 }
             }
-            curr.AddRange(left);
-            curr.AddRange(right);
             return curr;
         }
 

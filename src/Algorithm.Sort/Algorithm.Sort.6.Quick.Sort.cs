@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Deployment.Application;
 using System.Linq;
 
 namespace Algorithm.Sort
@@ -43,7 +44,7 @@ namespace Algorithm.Sort
                     right--;
                     continue;
                 }
-                if (left >= right) continue;
+                if (left > right) continue;
                 var curr = inputs[left];
                 inputs[left] = inputs[right];
                 inputs[right] = curr;

@@ -27,7 +27,7 @@ namespace Algorithm.Sort
             foreach (var output in outputs)
             {
                 if (output == null) continue;
-                foreach (var o in output) inputs[k++] = 0;
+                foreach (var o in output) inputs[k++] = o;
             }
         }
 

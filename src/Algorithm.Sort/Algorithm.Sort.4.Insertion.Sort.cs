@@ -17,15 +17,12 @@ namespace Algorithm.Sort
         {
             for (var i = 1; i < inputs.Count; i++)
             {
-                for (var j = i; j > 0; j--)
+                for (var j = i; j >= 0; j--)
                 {
-                    if (inputs[j - 1] > inputs[j])
-                    {
-                        var curr = inputs[j - 1];
-                        inputs[j - 1] = inputs[j];
-                        inputs[j] = curr;
-                    }
-                    else break;
+                    if (inputs[j - 1] <= inputs[j]) break;
+                    var curr = inputs[j - 1];
+                    inputs[j - 1] = inputs[j];
+                    inputs[j] = curr;
                 }
             }
         }
