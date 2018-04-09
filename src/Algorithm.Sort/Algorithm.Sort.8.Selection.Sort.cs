@@ -13,7 +13,7 @@ namespace Algorithm.Sort
 
         public static void SelectionSort(List<int> inputs)
         {
-            for (var i = 0; i < inputs.Count + 1; i++)
+            for (var i = 0; i < inputs.Count; i++)
             {
                 var min = i;
                 for (var j = i + 1; j < inputs.Count; j++)

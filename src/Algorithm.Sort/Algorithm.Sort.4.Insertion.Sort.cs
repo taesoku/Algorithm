@@ -19,7 +19,7 @@ namespace Algorithm.Sort
             {
                 for (var j = i; j >= 0; j--)
                 {
-                    if (inputs[j - 1] <= inputs[j]) break;
+                    if (inputs[j - 1] <= inputs[j]) continue;
                     var curr = inputs[j - 1];
                     inputs[j - 1] = inputs[j];
                     inputs[j] = curr;

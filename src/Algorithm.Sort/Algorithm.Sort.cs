@@ -14,10 +14,10 @@ namespace Algorithm.Sort
             //AlgorithmSort2BucketSort.Answer();
             //AlgorithmSort3HeapSort.Answer();
             //AlgorithmSort4InsertionSort.Answer();
-            AlgorithmSort5MergeSort.Answer();
+            //AlgorithmSort5MergeSort.Answer();
             //AlgorithmSort6QuickSort.Answer();
             //AlgorithmSort7RadixSort.Answer();
-            //AlgorithmSort8SelectionSort.Answer();
+            AlgorithmSort8SelectionSort.Answer();
             Console.WriteLine(stopwatch.ElapsedMilliseconds + " milliseconds taken for this operation.");
             Console.Read();
         }

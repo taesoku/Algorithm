@@ -28,7 +28,7 @@ namespace Algorithm.Sort
             var sorted = RadixSort(radix);
             for (var i = 0; i < sorted.Count; i++)
                 temp[i] = inputs[(int) sorted[i]];
-            return RadixList(temp.ToList(), digit*10);
+            return RadixList(temp.ToList(), digit * 10);
         }
 
         public static Hashtable RadixSort(Hashtable radix)
