@@ -97,8 +97,8 @@ namespace Algorithm.Search
                 Visit(input);
                 foreach (var adjacent in input.Adjacents)
                 {
-                    if (!adjacent.Marked)
-                        DepthFirstSearchRecursive(adjacent);
+                    if (adjacent.Marked) continue;
+                    DepthFirstSearchRecursive(adjacent);
                 }
             }
 

@@ -71,18 +71,16 @@ namespace Algorithm.Search
             {
                 var root = Nodes[index];
                 var queue = new Queue<Node>();
-                queue.Enqueue(root);
                 root.Marked = true;
+                queue.Enqueue(root);
                 while (queue.Count != 0)
                 {
                     var curr = queue.Dequeue();
                     foreach (var adjacent in curr.Adjacents)
                     {
-                        if (!adjacent.Marked)
-                        {
-                            adjacent.Marked = true;
-                            queue.Enqueue(adjacent);
-                        }
+                        if (adjacent.Marked) continue;
+                        adjacent.Marked = true;
+                        queue.Enqueue(adjacent);
                     }
                     Visit(curr);
                 }
