@@ -73,7 +73,7 @@ namespace Algorithm.Sort
             return left;
         }
 
-        public static List<int> MergeSort(List<int> left, List<int> right)
+        public static List<int> MergeSort(List<int> left, List<int> right )
         {
             var curr = new List<int>();
             while (left.Count != 0 && right.Count != 0)
@@ -89,8 +89,9 @@ namespace Algorithm.Sort
                     right.RemoveAt(0);
                 }
             }
+            curr.AddRange(left);
+            curr.AddRange(right);
             return curr;
-
         }
 
     }
