@@ -58,7 +58,7 @@ namespace Algorithm.Sort
             return temp;
         }
 
-        public static List<int> MergeList(List<int> inputs)
+        private static List<int> MergeList(List<int> inputs)
         {
             if (inputs.Count <= 1) return inputs;
             var left = new List<int>();
@@ -73,7 +73,7 @@ namespace Algorithm.Sort
             return left;
         }
 
-        public static List<int> MergeSort(List<int> left, List<int> right )
+        private static List<int> MergeSort(List<int> left, List<int> right)
         {
             var curr = new List<int>();
             while (left.Count != 0 && right.Count != 0)

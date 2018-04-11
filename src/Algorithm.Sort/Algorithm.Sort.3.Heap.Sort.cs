@@ -11,7 +11,7 @@ namespace Algorithm.Sort
             HeapList(inputs);
         }
 
-        public static void HeapList(List<int> inputs)
+        private static void HeapList(List<int> inputs)
         {
             var count = inputs.Count;
             for (var i = (count - 1) / 2; i >= 0; i--)
@@ -26,7 +26,7 @@ namespace Algorithm.Sort
             }
         }
 
-        public static void HeapSort(List<int> inputs, int size, int index = 0)
+        private static void HeapSort(List<int> inputs, int size, int index = 0)
         {
             var right = (index + 1) * 2;
             var left = right - 1;

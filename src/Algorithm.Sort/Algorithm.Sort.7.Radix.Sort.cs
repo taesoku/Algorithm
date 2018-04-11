@@ -13,7 +13,7 @@ namespace Algorithm.Sort
             var outputs = RadixList(inputs);
         }
 
-        public static List<int> RadixList(List<int> inputs, int digit = 1)
+        private static List<int> RadixList(List<int> inputs, int digit = 1)
         {
             var isEmpty = true;
             var radix = new Hashtable();
@@ -28,10 +28,10 @@ namespace Algorithm.Sort
             var sorted = RadixSort(radix);
             for (var i = 0; i < sorted.Count; i++)
                 temp[i] = inputs[(int) sorted[i]];
-            return RadixList(temp.ToList(), digit*10);
+            return RadixList(temp.ToList(), digit * 10);
         }
 
-        public static Hashtable RadixSort(Hashtable radix)
+        private static Hashtable RadixSort(Hashtable radix)
         {
             var temp = new int[MaxHashtable(radix) + 1];
             var value = new Hashtable();
@@ -47,7 +47,7 @@ namespace Algorithm.Sort
             return value;
         }
 
-        public static int MaxHashtable(Hashtable radix)
+        private static int MaxHashtable(Hashtable radix)
         {
             var max = (int) radix[0];
             return radix.Cast<int>().Concat(new[] {max}).Max();

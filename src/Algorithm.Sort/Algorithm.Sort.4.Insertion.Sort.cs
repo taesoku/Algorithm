@@ -13,11 +13,11 @@ namespace Algorithm.Sort
             InsertionSort(inputs);
         }
 
-        public static void InsertionSort(List<int> inputs)
+        private static void InsertionSort(List<int> inputs)
         {
             for (var i = 1; i < inputs.Count; i++)
             {
-                for (var j = i; j >= 0; j--)
+                for (var j = i - 1; j >= 0; j--)
                 {
                     if (inputs[j - 1] <= inputs[j]) continue;
                     var curr = inputs[j - 1];

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Deployment.Application;
 using System.Linq;
 
 namespace Algorithm.Sort
@@ -13,12 +12,11 @@ namespace Algorithm.Sort
             var outputs = QuickList(inputs);
         }
 
-        public static List<int> QuickList(List<int> inputs)
+        private static List<int> QuickList(List<int> inputs)
         {
             if (inputs.Count <= 1) return inputs;
             var average = inputs.Average();
             var pivot = inputs.Where(i => i >= average).Min();
-            if (inputs.First() == pivot) return inputs;
             QuickSort(inputs, pivot);
             var index = inputs.IndexOf(pivot);
             var left = new List<int>();
@@ -31,7 +29,7 @@ namespace Algorithm.Sort
             return left;
         }
 
-        public static void QuickSort(List<int> inputs, int pivot)
+        private static void QuickSort(List<int> inputs, int pivot)
         {
             var left = 0;
             var right = inputs.Count - 1;
