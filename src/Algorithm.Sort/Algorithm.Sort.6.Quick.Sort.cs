@@ -46,7 +46,7 @@ namespace Algorithm.Sort
                 var curr = inputs[left];
                 inputs[left] = inputs[right];
                 inputs[right] = curr;
-            } 
+            }
         }
 
     }

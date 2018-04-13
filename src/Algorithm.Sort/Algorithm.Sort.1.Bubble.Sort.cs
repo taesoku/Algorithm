@@ -13,7 +13,7 @@ namespace Algorithm.Sort
             BubbleSort(inputs2, inputs2.Count);
         }
 
-        public static void BubbleSort(List<int> inputs, int n)
+        private static void BubbleSort(List<int> inputs, int n)
         {
             var isSorted = true;
             for (var i = 0; i < n - 1; i++)
