@@ -11,12 +11,12 @@ namespace Algorithm.Sort
             SelectionSort(inputs);
         }
 
-        public static int SelectionSort(List<int> inputs)
+        private static void SelectionSort(List<int> inputs)
         {
             for (var i = 0; i < inputs.Count - 1; i++)
             {
                 var min = i;
-                for (var j = i + 1; i < inputs.Count; j++)
+                for (var j = i + 1; j < inputs.Count; j++)
                     if (inputs[j] < inputs[min]) min = j;
                 if (i == min) continue;
                 var curr = inputs[i];
