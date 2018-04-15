@@ -38,6 +38,6 @@ namespace Algorithm.Sort
             inputs[max] = curr;
             HeapSort(inputs, size, max);
         }
-
+        
     }
 }
