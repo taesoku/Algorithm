@@ -58,6 +58,7 @@ namespace Algorithm.Sort
             return temp;
         }
 
+
         private static List<int> MergeList(List<int> inputs)
         {
             if (inputs.Count <= 1) return inputs;
