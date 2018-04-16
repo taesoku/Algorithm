@@ -26,7 +26,6 @@ namespace Algorithm.Sort
             }
         }
 
-
         private static void HeapSort(List<int> inputs, int size, int index = 0)
         {
             var right = (index + 1) * 2;
