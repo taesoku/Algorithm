@@ -46,8 +46,8 @@
   <ItemGroup>
     <Compile Include="Algorithm.Search.List.1.Binary.Search.cs" />
     <Compile Include="Algorithm.Search.List.2.Linear.Search.cs" />
-    <Compile Include="Algorithm.Search.2D.2.Depth.First.Search.cs" />
-    <Compile Include="Algorithm.Search.2D.1.Breath.First.Search.cs" />
+    <Compile Include="Algorithm.Search.Graph.2.Depth.First.Search.cs" />
+    <Compile Include="Algorithm.Search.Graph.1.Breath.First.Search.cs" />
     <Compile Include="Algorithm.Search.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -10,7 +10,7 @@ namespace Algorithm.Search
 
     //stack with recursive
 
-    public class Algorithm011DepthFirstSearch
+    public class AlgorithmSearchGraph2DepthFirstSearch
     {
 
         public static void Answer()

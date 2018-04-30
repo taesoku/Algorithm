@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Algorithm.Search
 {
 
-    public class AlgorithmSearch2D1BreadthFirstSearch
+    public class AlgorithmSearchGraph1BreadthFirstSearch
     {
 
         public static void Answer()

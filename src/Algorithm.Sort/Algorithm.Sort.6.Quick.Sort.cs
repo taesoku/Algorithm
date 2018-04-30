@@ -48,6 +48,6 @@ namespace Algorithm.Sort
                 inputs[right] = curr;
             }
         }
-               
+
     }
 }
