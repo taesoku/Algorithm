@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm.Search.Tree.Binary.Search.Tree.cs" />
     <Compile Include="Algorithm.Search.List.1.Binary.Search.cs" />
     <Compile Include="Algorithm.Search.List.2.Linear.Search.cs" />
     <Compile Include="Algorithm.Search.Graph.2.Depth.First.Search.cs" />
