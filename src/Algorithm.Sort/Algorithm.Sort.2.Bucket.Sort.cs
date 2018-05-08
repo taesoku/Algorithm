@@ -23,11 +23,11 @@ namespace Algorithm.Sort
                 if (outputs[curr] == null) outputs[curr] = new List<int>();
                 outputs[curr].Add(input);
             }
-            var k = 0;
+            var i = 0;
             foreach (var output in outputs)
             {
                 if (output == null) continue;
-                foreach (var o in output) inputs[k++] = o;
+                foreach (var o in output) inputs[i++] = o;
             }
         }
 
