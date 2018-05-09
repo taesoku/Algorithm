@@ -23,8 +23,8 @@ namespace AlgorithmSearch
         public void Postorder(TreeNode node)
         {
             if (node == null) return;
-            Preorder(node.Left);
-            Preorder(node.Right);
+            Postorder(node.Left);
+            Postorder(node.Right);
             //print
         }
 
