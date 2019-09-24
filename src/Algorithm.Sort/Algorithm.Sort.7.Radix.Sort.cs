@@ -52,6 +52,41 @@ namespace Algorithm.Sort
             var max = (int) radix[0];
             return radix.Cast<int>().Concat(new[] {max}).Max();
         }
+        
+        private static void RadixList(List<int> inputs)
+        {
+            var exp = 1;
+            var max = inputs.Max();
+            while (max/exp > 0)
+            {
+                RadixSort(inputs, exp);
+                exp *= 10;
+            }
+        }
+        
+        private static void RadixSort(List<int> inputs, int exp)
+        {
+            var n = inputs.Count();
+            var curr = new int[10];
+            var temp = new int[n];
+            for (var i = 0; i < n; i++)
+            {
+                var index = (inputs[i]/exp);
+                curr[index%10] += 1;
+            }
+            for (var i = 1; i < 10; i++)
+                curr[i] += curr[i - 1];
+            var i = n - 1;
+            while (i >= 0)
+            {
+                var index = inputs[i]/exp;
+                temp = [curr[index%10] - 1] = inputs[i];
+                curr = [index%10] -= 1;
+                i -= 1;
+            }
+            for (i = 0; i < n; i++)
+                inputs[i] = temp[i];
+        }
 
     }
 }
